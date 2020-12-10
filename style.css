@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,600;1,400&display=swap');
+
+div.col-12 img{
+	width:100%;
+	height:auto;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(0, 60, 85, 0.8) 200px, rgba(0, 60, 85, 0.9) 300px, rgba(0, 60, 85, 1) 500px), url('img/cover.jpg');
+		background-repeat: no-repeat;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Work Sans';
+    color: #E57700;
+		font-weight: 600;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Work Sans';
+    color: #FFFFFF;
+		font-weight: 600;
+}
