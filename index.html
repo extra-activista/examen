@@ -39,25 +39,26 @@
             <div class="col-12">
               <!-- Gráfico Incidencia PIB-->
               <h3 class="text-center pt-3 mt-5"> Incidencia porcentual por industria al PIB 2019</h3>
-              <canvas id="myChart" width="400" height="200"></canvas>
+              <canvas id="Mineria" width="400" height="200"></canvas>
               <script>
-              var ctx = document.getElementById('myChart').getContext('2d');
+              var ctx = document.getElementById('Mineria').getContext('2d'); Chart.defaults.global.defaultFontColor = 'rgb(255, 255, 255)';
               var myChart = new Chart(ctx, {
                   type: 'doughnut',
                   data: {
                       labels: ['Minería', 'Industria', 'Agricultura'],
+                      fontColor: 'rgba(255, 255, 255, 1)',
                       datasets: [{
                           label: '% de incidencia en el PIB nacional',
                           data: [54.65, 35.95, 9.39],
                           backgroundColor: [
-                              'rgba(230, 120, 0, 0.9)',
-                              'rgba(220, 130, 40, 0.8)',
-                              'rgba(235, 150, 80, 0.7)',
+                              'rgba(239, 124, 16, 0.9)',
+                              'rgba(255, 214, 0, 0.7)',
+                              'rgba(20, 134, 201, 0.5)',
                           ],
                           borderColor: [
-                              'rgba(230, 120, 0, 1)',
-                              'rgba(220, 130, 40, 1)',
-                              'rgba(235, 150, 80, 1)',
+                              'rgba(239, 124, 16, 1)',
+                              'rgba(255, 214, 0, 1)',
+                              'rgba(20, 134, 201,, 1)',
                           ],
                           borderWidth: 1
                       }]
@@ -108,13 +109,55 @@
     <!-- Parte 3: Mapa territorial: Mineras vs Territorio Indígena-->
     <main class="container">
       <div class="row">
-        <div class="col-12">
-            <h2 class="text-center mt-5">Mapa Territorial</h2>
-            <p class="col-1"> instrucción </p>
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KnH6MvhFOtWf9anU_GRTlSPnVwf_utcP" class="col-12 border-0" height="500" ></iframe>
-            <div class="col-sm-10 col-md-10 col-lg-8">
-                <h3 class="text-center"> Subtítulo</h3>
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        <div class="col-12 justify-content-center">
+            <div>
+               <h2 class="text-center mt-5">Mapa Territorial</h2>
+                <p class="text-left py-3 "><span class="ml-10 d-none d-lg-inline">En chile en la zona norte grande es donde más se concentran las industrias mineras existiendo tres grandes tipos, Industrias mineras metálicas, no metálicas y de energía.</span></p>
+               <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KnH6MvhFOtWf9anU_GRTlSPnVwf_utcP" class="col-12 border-0" height="500" ></iframe>
+            </div>
+            <div>
+              <blockquote cite="https://biblioserver.sernageomin.cl/opac/DataFiles/14905_v3_pp_473_476.pdf">
+                <p class="mt-5">"El extractivismo minero es reconocido mundialmente como una actividad económica que presenta grandes impactos ambientales en los ecosistemas. (...)en Chile, éstos se nos presentan como “costos necesarios para el crecimiento”. Ello implica la imposición de un concepto de desarrollo que precariza sistemáticamente el empleo, vulnera los territorios, los ecosistemas y la vida de quienes habitan en las regiones del país."</p>
+                <footer><a href="https://biblioserver.sernageomin.cl/opac/DataFiles/14905_v3_pp_473_476.pdf">Espinoza, Ramirez, Fernando, & Álvarez, 2015</a></footer>
+              </blockquote>
+            </div>
+             <div class="col-12">
+              <h3 class="text-center pt-3 mt-5"> Índice de Pobreza en Chile por Región</h3>
+              <canvas id="PobrezaenChile" width="400" height="200"></canvas>
+              <script>
+              var ctx = document.getElementById('PobrezaenChile').getContext('2d'); Chart.defaults.global.defaultFontColor = 'rgb(255, 255, 255)';
+              var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                      labels: ['Arica y Parinacota', 'Tarapacá', 'Antofagasta', 'Atacama', 'Coquimbo', 'Valparaíso', 'Metropolitana', 'OHiggins', 'Maule', 'Ñuble', 'Bio Bio', 'Araucanía', 'Los Ríos', 'Los Lagos', 'Aysén', 'Magallanes'],
+                      datasets: [{
+                				label: 'Pobreza',
+                        backgroundColor: 'rgba(20, 134, 201, 0.7)',
+                        borderColor: 'rgba(20, 134, 201, 1)',
+                				borderWidth: 1,
+                				data: [8.40, 6.40, 5.10, 7.90, 11.90, 7.10, 5.40, 10.10, 12.70, 16.10, 12.30, 17.20, 12.10, 11.70, 4.60, 2.10],
+                			}, {
+                				label: 'Pobreza Extrema',
+                        backgroundColor: 'rgba(239, 124, 16, 0.7)',
+                        borderColor: 'rgba(239, 124, 16, 1)',
+                				borderWidth: 1,
+                				data: [2.4, 1.7, 1.6, 2.6, 3, 1.6, 1.5, 2.2, 3, 4.6, 3.7, 4.6, 3.3, 3.4, 1.1, 0.7]
+                			}]
+                  },
+                  options: {
+                  responsive: true,
+                          title: {
+                          display: true},
+                          scales: {
+                              ticks: {
+                                  callback: function(value, index, values) {
+                                      return value;
+                                  }
+                              }
+                          }
+                     }
+                });
+              </script>
             </div>
         </div>
       </div>
