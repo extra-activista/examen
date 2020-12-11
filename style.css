@@ -7,7 +7,6 @@ div.col-12 img{
 
 body {
     background: linear-gradient(rgba(0, 60, 85, 0.6) 0, rgba(0, 60, 85, 1) 40vh), url("img/cover.jpg");
-		background-repeat: no-repeat;
     color: #fff;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -46,4 +45,9 @@ blockquote footer {
 
 blockquote footer:before {
     content: "— ";
+}
+
+.portfolio-item {
+    margin-bottom: 20px;
+	  color: #1486C9;
 }
