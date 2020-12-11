@@ -6,7 +6,7 @@ div.col-12 img{
 }
 
 body {
-    background: linear-gradient(180deg, rgba(0, 60, 85, 0.8) 200px, rgba(0, 60, 85, 0.9) 300px, rgba(0, 60, 85, 1) 500px), url('img/cover.jpg');
+    background: linear-gradient(rgba(0, 60, 85, 0.6) 0, rgba(0, 60, 85, 1) 40vh), url("img/cover.jpg");
 		background-repeat: no-repeat;
     color: #fff;
     font-family: "Roboto", sans-serif;
@@ -14,13 +14,13 @@ body {
 }
 
 h1 {
-    font-family: 'Work Sans';
+    font-family: "Work Sans";
     color: #E57700;
 		font-weight: 600;
 }
 
 h2, h3, h4, h5 {
-    font-family: 'Work Sans';
+    font-family: "Work Sans";
     color: #FFFFFF;
 		font-weight: 600;
 }
@@ -32,7 +32,7 @@ blockquote {
 blockquote p {
     margin: 0 0 .5rem 0;
     padding: 0;
-    font-family: 'Work Sans';
+    font-family: "Work Sans";
     font-style: italic;
     font-weight: 300;
     font-size: 125%;
